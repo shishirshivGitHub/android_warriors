@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#dfe6f6"
+    tools:context=".HomeActivity">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="@dimen/back_arrow_dimen"
+        android:layout_height="@dimen/back_arrow_dimen"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_back_arrow" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start Activity"
+        android:textColor="#000000"
+        android:textSize="@dimen/header_txt_size"
+        android:fontFamily="@font/app_font"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.08" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.86" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guideline2"
+        app:layout_constraintVertical_bias="0.0">
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.33" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.66" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/walking_card"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:cardBackgroundColor="#dfe6f6"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="15dp"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintBottom_toTopOf="@+id/guideline4"
+            app:layout_constraintEnd_toStartOf="@+id/guideline6"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <include layout="@layout/walking_layout" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/tradmill_layout"
+            layout="@layout/tradmill_layout"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:cardBackgroundColor="#dfe6f6"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="15dp"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintBottom_toTopOf="@+id/guideline4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline6"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <include layout="@layout/tradmill_layout" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/running_card"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:cardBackgroundColor="#dfe6f6"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="15dp"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintBottom_toTopOf="@+id/guideline5"
+            app:layout_constraintEnd_toStartOf="@+id/guideline6"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline4">
+
+            <include layout="@layout/running_layout" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/running_card"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:cardBackgroundColor="#dfe6f6"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="15dp"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintBottom_toTopOf="@+id/guideline5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline6"
+            app:layout_constraintTop_toTopOf="@+id/guideline4">
+
+            <include
+                layout="@layout/cycling_layout"/>
+            </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/gym_card"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:cardBackgroundColor="#dfe6f6"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="15dp"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guideline6"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline5">
+
+            <include layout="@layout/gym_layout" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/yoga_card"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:cardBackgroundColor="#dfe6f6"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="15dp"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline6"
+            app:layout_constraintTop_toTopOf="@+id/guideline5">
+
+            <include layout="@layout/yoga_layout" />
+        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/home_card"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:cardBackgroundColor="#dfe6f6"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="15dp"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/activity_card"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline3"
+        tools:ignore="MissingConstraints">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/walking_icon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                app:layout_constraintBottom_toTopOf="@+id/walking_txt"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_home"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/walking_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/home"
+                android:textColor="#9D9D9D"
+                android:textSize="14sp"
+                android:fontFamily="@font/app_font"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/walking_icon"
+                app:layout_constraintStart_toStartOf="@+id/walking_icon"
+                app:layout_constraintTop_toBottomOf="@+id/walking_icon" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/activity_card"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:cardBackgroundColor="#dfe6f6"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="15dp"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/settings_card"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/home_card"
+        app:layout_constraintTop_toTopOf="@+id/guideline3"
+        tools:ignore="MissingConstraints">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/walking_icon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                app:layout_constraintBottom_toTopOf="@+id/walking_txt"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/pulse_rate"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/walking_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/activity"
+                android:textColor="#9D9D9D"
+                android:textSize="14sp"
+                android:fontFamily="@font/app_font"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/walking_icon"
+                app:layout_constraintStart_toStartOf="@+id/walking_icon"
+                app:layout_constraintTop_toBottomOf="@+id/walking_icon" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/settings_card"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:cardBackgroundColor="#dfe6f6"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="15dp"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/profile_card"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/activity_card"
+        app:layout_constraintTop_toTopOf="@+id/guideline3"
+        tools:ignore="MissingConstraints">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/walking_icon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                app:layout_constraintBottom_toTopOf="@+id/walking_txt"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_settings"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/walking_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/settings"
+                android:textColor="#9D9D9D"
+                android:textSize="14sp"
+                android:fontFamily="@font/app_font"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/walking_icon"
+                app:layout_constraintStart_toStartOf="@+id/walking_icon"
+                app:layout_constraintTop_toBottomOf="@+id/walking_icon" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/profile_card"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:cardBackgroundColor="#dfe6f6"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="15dp"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/settings_card"
+        app:layout_constraintTop_toTopOf="@+id/guideline3"
+        tools:ignore="MissingConstraints">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/walking_icon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                app:layout_constraintBottom_toTopOf="@+id/walking_txt"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_person"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/walking_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/profile"
+                android:textColor="#9D9D9D"
+                android:textSize="14sp"
+                android:fontFamily="@font/app_font"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/walking_icon"
+                app:layout_constraintStart_toStartOf="@+id/walking_icon"
+                app:layout_constraintTop_toBottomOf="@+id/walking_icon" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
