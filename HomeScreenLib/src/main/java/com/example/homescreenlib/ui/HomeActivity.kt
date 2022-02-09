@@ -10,10 +10,13 @@ import com.example.homescreenlib.data.DashboardItems
 import com.example.homescreenlib.databinding.ActivityHomeBinding
 import com.example.homescreenlib.viewmodel.DashboardViewModel
 import com.example.homescreenlib.viewmodel.ViewModelFactory
+import org.koin.android.ext.android.inject
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class HomeActivity : AppCompatActivity() {
 
-    private lateinit var viewModel: DashboardViewModel
+    //private lateinit var viewModel: DashboardViewModel
+    val viewModel: DashboardViewModel by viewModel()
     private val adapter: HomeAdapter = HomeAdapter()
     private lateinit var binding : ActivityHomeBinding
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -23,10 +26,10 @@ class HomeActivity : AppCompatActivity() {
         observedashboardItems()
     }
     private fun initViewModels() {
-        viewModel = ViewModelProvider(
+        /*viewModel = ViewModelProvider(
             this,
             ViewModelFactory(DashboardItems())
-        )[DashboardViewModel::class.java]
+        )[DashboardViewModel::class.java]*/
         viewModel.getDashboardItems()
 
     }
