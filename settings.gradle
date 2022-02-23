@@ -16,3 +16,4 @@ rootProject.name = "Android Warriors"
 include ':app'
 include ':LoginScreenLib'
 include ':HomeScreenLib'
+include ':StylesScreenLib'

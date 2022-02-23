@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Android_Warriors.iml" filepath="$PROJECT_DIR$/.idea/modules/Android_Warriors.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/HomeScreenLib/Android_Warriors.HomeScreenLib.iml" filepath="$PROJECT_DIR$/.idea/modules/HomeScreenLib/Android_Warriors.HomeScreenLib.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/LoginScreenLib/Android_Warriors.LoginScreenLib.iml" filepath="$PROJECT_DIR$/.idea/modules/LoginScreenLib/Android_Warriors.LoginScreenLib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/StylesScreenLib/Android_Warriors.StylesScreenLib.iml" filepath="$PROJECT_DIR$/.idea/modules/StylesScreenLib/Android_Warriors.StylesScreenLib.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Android_Warriors.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Android_Warriors.app.iml" />
     </modules>
   </component>
