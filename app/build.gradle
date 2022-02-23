@@ -32,7 +32,6 @@ android {
 }
 
 dependencies {
-
     implementation project(':LoginScreenLib')
     implementation project(':HomeScreenLib')
     implementation 'androidx.core:core-ktx:1.7.0'
