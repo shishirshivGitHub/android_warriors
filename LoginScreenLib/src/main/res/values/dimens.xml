@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="textSmall">14dp</dimen>
+    <dimen name="textMedium">18dp</dimen>
+    <dimen name="textLarge">22dp</dimen>
+
+    <dimen name="smallPadding">4dp</dimen>
+    <dimen name="mediumPadding">8dp</dimen>
+    <dimen name="largePadding">16dp</dimen>
+
+    <dimen name="smallMargin">4dp</dimen>
+    <dimen name="mediumMargin">8dp</dimen>
+    <dimen name="largeMargin">16dp</dimen>
+
+    <dimen name="buttonRadius">50dp</dimen>
+</resources>
