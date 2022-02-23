@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_nav"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/walkingFragment"
+        android:name="com.example.homescreenlib.ui.fragments.WalkingFragment"
+        android:label="fragment_walking"
+        tools:layout="@layout/fragment_walking" />
+    <fragment
+        android:id="@+id/treadmillFragment"
+        android:name="com.example.homescreenlib.ui.fragments.TreadmillFragment"
+        android:label="fragment_treadmill"
+        tools:layout="@layout/fragment_treadmill" />
+    <fragment
+        android:id="@+id/runningFragment"
+        android:name="com.example.homescreenlib.ui.fragments.RunningFragment"
+        android:label="fragment_running"
+        tools:layout="@layout/fragment_running" />
+    <fragment
+        android:id="@+id/cyclingFragment"
+        android:name="com.example.homescreenlib.ui.fragments.CyclingFragment"
+        android:label="fragment_cycling"
+        tools:layout="@layout/fragment_cycling" />
+    <fragment
+        android:id="@+id/gymFragment"
+        android:name="com.example.homescreenlib.ui.fragments.GymFragment"
+        android:label="fragment_gym"
+        tools:layout="@layout/fragment_gym" />
+    <fragment
+        android:id="@+id/yogaFragment"
+        android:name="com.example.homescreenlib.ui.fragments.YogaFragment"
+        android:label="fragment_yoga"
+        tools:layout="@layout/fragment_yoga" />
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.homescreenlib.ui.fragments.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_walkingFragment"
+            app:destination="@id/walkingFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_runningFragment"
+            app:destination="@id/runningFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_cyclingFragment"
+            app:destination="@id/cyclingFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_treadmillFragment"
+            app:destination="@id/treadmillFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_yogaFragment"
+            app:destination="@id/yogaFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_gymFragment"
+            app:destination="@id/gymFragment" />
+    </fragment>
+</navigation>

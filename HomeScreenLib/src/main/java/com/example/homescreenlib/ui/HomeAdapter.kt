@@ -32,7 +32,14 @@ class HomeAdapter : ListAdapter<Dashboard, HomeAdapter.ViewHolder>(HomeAdapterDi
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
        val item = getItem(position)
+        holder.itemView.setOnClickListener {
+            onItemClickListener?.let { it(item) }
+        }
         holder.bind(item)
+    }
+    private var onItemClickListener: ((Dashboard) -> Unit)? = null
+    fun setOnItemClickListener(listener: (Dashboard) -> Unit) {
+        onItemClickListener = listener
     }
 }
 

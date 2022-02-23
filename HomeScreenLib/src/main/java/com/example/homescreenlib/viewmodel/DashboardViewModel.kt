@@ -5,16 +5,17 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.homescreenlib.data.Dashboard
 import com.example.homescreenlib.data.DashboardItems
+import com.example.homescreenlib.domain.usecase.GetDashboardItemsUseCase
+import com.example.homescreenlib.utils.Event
 
-class DashboardViewModel(private val dashboardItems: DashboardItems): ViewModel() {
-    private val _itemsList = MutableLiveData<List<Dashboard>>()
-    val itemsList: LiveData<List<Dashboard>>
-            get() = _itemsList
+class DashboardViewModel(private val dashboardItemsUseCase: GetDashboardItemsUseCase) : ViewModel() {
+    private val _itemsList = MutableLiveData<Event<List<Dashboard>>>()
+    val itemsList: LiveData<Event<List<Dashboard>>>
+        get() = _itemsList
 
     fun getDashboardItems() {
-        //val dashboardItems = DashboardItems()
-        val items = dashboardItems.dashBoardItems()
-        _itemsList.value = items
+        val items = dashboardItemsUseCase.invoke()
+        _itemsList.value = Event(items)
     }
 
 }
