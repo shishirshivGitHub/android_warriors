@@ -7,15 +7,12 @@
         <variable
             name="dashboardViewmodel"
             type="com.example.homescreenlib.viewmodel.DashboardViewModel" />
-        <!--<variable
-            name="adapter"
-            type="com.example.homescreenlib.ui.HomeAdapter" />-->
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#dfe6f6"
+        android:background="@color/bg_color"
         tools:context=".ui.HomeActivity">
 
 
@@ -34,7 +31,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Start Activity"
-            android:textColor="#000000"
+            android:textColor="@color/color_black"
             android:textSize="@dimen/header_txt_size"
             android:fontFamily="@font/app_font"
             android:textStyle="bold"
@@ -62,7 +59,7 @@
             android:id="@+id/home_card"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            app:cardBackgroundColor="#dfe6f6"
+            app:cardBackgroundColor="@color/bg_color"
             app:cardCornerRadius="10dp"
             app:cardElevation="15dp"
             app:cardUseCompatPadding="true"
@@ -110,7 +107,7 @@
             android:id="@+id/activity_card"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            app:cardBackgroundColor="#dfe6f6"
+            app:cardBackgroundColor="@color/bg_color"
             app:cardCornerRadius="10dp"
             app:cardElevation="15dp"
             app:cardUseCompatPadding="true"
@@ -157,7 +154,7 @@
             android:id="@+id/settings_card"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            app:cardBackgroundColor="#dfe6f6"
+            app:cardBackgroundColor="@color/bg_color"
             app:cardCornerRadius="10dp"
             app:cardElevation="15dp"
             app:cardUseCompatPadding="true"
@@ -204,7 +201,7 @@
             android:id="@+id/profile_card"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            app:cardBackgroundColor="#dfe6f6"
+            app:cardBackgroundColor="@color/bg_color"
             app:cardCornerRadius="10dp"
             app:cardElevation="15dp"
             app:cardUseCompatPadding="true"

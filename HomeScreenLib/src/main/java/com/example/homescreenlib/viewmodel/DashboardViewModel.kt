@@ -15,7 +15,8 @@ class DashboardViewModel(private val dashboardItemsUseCase: GetDashboardItemsUse
 
     fun getDashboardItems() {
         val items = dashboardItemsUseCase.invoke()
-        _itemsList.value = Event(items)
+        items.let {
+            _itemsList.value = Event(it)
+        }
     }
-
 }

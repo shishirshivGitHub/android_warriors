@@ -18,7 +18,7 @@
             android:id="@+id/dashboard_card"
             android:layout_width="match_parent"
             android:layout_height="200dp"
-            app:cardBackgroundColor="#dfe6f6"
+            app:cardBackgroundColor="@color/bg_color"
             app:cardCornerRadius="10dp"
             app:cardElevation="10dp"
             app:cardUseCompatPadding="true"
