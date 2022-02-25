@@ -3,6 +3,7 @@
     package="com.example.loginscreenlib">
 <uses-permission android:name="android.permission.INTERNET"/>
     <application
+        android:usesCleartextTraffic="true"
         android:name=".LoginApp">
         <activity
             android:name=".presentation.LoginActivity"

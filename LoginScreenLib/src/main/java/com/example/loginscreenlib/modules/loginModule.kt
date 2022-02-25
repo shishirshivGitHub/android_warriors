@@ -1,7 +1,5 @@
 package com.example.loginscreenlib.common
 
-import com.example.loginscreenlib.data.model.LoginRequest
-import com.example.loginscreenlib.data.remote.RestClient
 import com.example.loginscreenlib.data.repositoryImpl.LoginRepositoryImpl
 import com.example.loginscreenlib.domain.repository.LoginRepository
 import com.example.loginscreenlib.domain.usecase.LoginUseCase
@@ -12,7 +10,6 @@ import org.koin.dsl.bind
 import org.koin.dsl.module
 
 val loginModule: Module = module {
-    single { RestClient() }
     single { LoginRepositoryImpl(get()) } bind LoginRepository::class
     factory { LoginUseCase(get()) }
     viewModel { LoginViewModel(get()) }

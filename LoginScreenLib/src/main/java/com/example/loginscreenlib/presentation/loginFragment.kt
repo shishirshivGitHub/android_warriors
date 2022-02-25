@@ -1,15 +1,16 @@
 package com.example.loginscreenlib.presentation
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.viewModels
 import androidx.lifecycle.coroutineScope
 import com.example.loginscreenlib.databinding.FragmentLoginBinding
 import kotlinx.coroutines.flow.collect
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class loginFragment : Fragment() {
 
@@ -17,7 +18,7 @@ class loginFragment : Fragment() {
     val binding: FragmentLoginBinding
         get() = _binding!!
 
-    val loginViewModel: LoginViewModel by viewModels()
+    val loginViewModel: LoginViewModel by viewModel()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -30,10 +31,10 @@ class loginFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
         binding.contentScrolling.loginButton.setOnClickListener {
-          login()
+            login()
         }
 
-       /* lifecycle.coroutineScope.launchWhenCreated {
+        lifecycle.coroutineScope.launchWhenCreated {
             loginViewModel.loginResponse.collect {
                 if (it.isLoading) {
 
@@ -42,11 +43,19 @@ class loginFragment : Fragment() {
 
                 }
                 it.data?.let {
-                    // call homescreen
-                    Toast.makeText(requireActivity(), it.data.toString(), Toast.LENGTH_LONG)
+                    it.data?.let {
+                        Toast.makeText(
+                            requireActivity(),
+                            "Login Successfull : ${it.Name}",
+                            Toast.LENGTH_LONG
+                        ).show()
+                    }
+                    if (it.data == null) {
+                        Toast.makeText(requireActivity(), it.message, Toast.LENGTH_LONG).show()
+                    }
                 }
             }
-        }*/
+        }
     }
 
     private fun login() {

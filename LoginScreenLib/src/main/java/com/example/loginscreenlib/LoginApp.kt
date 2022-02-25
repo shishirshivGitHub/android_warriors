@@ -2,6 +2,7 @@ package com.example.loginscreenlib
 
 import android.app.Application
 import com.example.loginscreenlib.common.loginModule
+import com.example.loginscreenlib.modules.networkModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin
 
@@ -11,7 +12,7 @@ class LoginApp : Application() {
         super.onCreate()
         startKoin {
             androidContext(this@LoginApp)
-            modules(listOf(loginModule))
+            modules(listOf(networkModule,loginModule))
         }
     }
 }
